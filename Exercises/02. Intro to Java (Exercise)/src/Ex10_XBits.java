@@ -8,10 +8,10 @@ public class Ex10_XBits {
         int[][] matrix = new int[8][32];
         for (int row = 0; row < 8; row++) {
             String binaryString = Integer.toBinaryString(Integer.parseInt(reader.readLine()));
-            int counter = 31;
+            int colIndex = 31;
             for (int i = binaryString.length() - 1; i >= 0; i--) {
-                matrix[row][counter] = binaryString.charAt(i) - '0';
-                counter--;
+                matrix[row][colIndex] = binaryString.charAt(i) - '0';
+                colIndex--;
             }
         }
         int countPatterns = 0;
