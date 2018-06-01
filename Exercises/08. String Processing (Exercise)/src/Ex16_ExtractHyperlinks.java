@@ -13,7 +13,7 @@ public class Ex16_ExtractHyperlinks {
             text.append(input);
             input = reader.readLine();
         }
-        Pattern pattern = Pattern.compile("<a[^<>]+?href\\s*=\\s*(\".*?\"|'.*?'|(.*?))[\\s>]");
+        Pattern pattern = Pattern.compile("<a[^>]+?href\\s*=\\s*(\".*?\"|'.*?'|.*?)[\\s>]");
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             String match = matcher.group(1);
