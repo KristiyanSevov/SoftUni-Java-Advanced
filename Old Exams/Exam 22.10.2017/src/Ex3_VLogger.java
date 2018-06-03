@@ -30,8 +30,7 @@ public class Ex3_VLogger {
         System.out.printf("The V-Logger has a total of %d vloggers in its logs.%n", followers.size());
         List<String> sortedNames = followers.keySet()
                 .stream()
-                .sorted(Comparator.comparing(
-                        (String x) -> followers.get(x).size(), Comparator.reverseOrder())
+                .sorted(Comparator.comparing((String x) -> followers.get(x).size(), Comparator.reverseOrder())
                         .thenComparing(x -> following.get(x).size()))
                 .collect(Collectors.toList());
         int counter = 1;
